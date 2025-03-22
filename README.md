@@ -14,7 +14,7 @@ The site [http://yacd.haishan.me](http://yacd.haishan.me) is served with HTTP no
 - GitHub Container Registry [`ghcr.io/haishanh/yacd`](https://github.com/haishanh/yacd/pkgs/container/yacd)
 
 ```sh
-docker run -p 1234:80 -d --name yacd --rm ghcr.io/haishanh/yacd:master
+docker run -p 20327:80 -d --name yacd --rm ghcr.io/haishanh/yacd:master -e --hostname 127.0.0.1 --port 9097 
 
 # and then open http://localhost:1234 in your browser
 ```
