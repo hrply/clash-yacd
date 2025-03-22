@@ -12,9 +12,9 @@ The site [http://yacd.haishan.me](http://yacd.haishan.me) is served with HTTP no
 
 - Docker Hub [`haishanh/yacd`](https://hub.docker.com/r/haishanh/yacd)
 - GitHub Container Registry [`ghcr.io/haishanh/yacd`](https://github.com/haishanh/yacd/pkgs/container/yacd)
-
+for clash mihomo
 ```sh
-docker run -p 20327:80 -d --name yacd --rm ghcr.io/haishanh/yacd:master -e --hostname 127.0.0.1 --port 9097 
+docker run -p 20327:80 -e YACD_DEFAULT_BACKEND=http://127.0.0.1:9097 -d --add-host host.docker.internal:host-gateway --name clashdashboard --rm hrply/yacd_mihomo:v.1.0 
 
 # and then open http://localhost:1234 in your browser
 ```
